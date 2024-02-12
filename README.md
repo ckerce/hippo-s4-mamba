@@ -1,6 +1,6 @@
 ## Operator evolution in HiPPO / s4 / Mamaba
 
-There appears to be a discrepancy between the way operators are defined in the papers and the way they are implemented in the code.  The code uses elementwise exponentiation, while the papers use formulas for the fundamental matrix solution (see, for example (1)).  Most methods for computing the fundamental matrix solution $exp(A)$ will not be easily differentiable, but implementation approaches have been demonstrated in the numerical weather modeling community (see (2) and references therein).
+There appears to be a discrepancy between the way operators are defined in the papers ([Hippo](https://arxiv.org/abs/2206.12037), [S4](https://arxiv.org/abs/2111.00396), and [Mamba](https://arxiv.org/pdf/2312.00752.pdf)) and the way they are implemented in the code.  The code uses elementwise exponentiation, while the papers use formulas for the fundamental matrix solution (see, for example (1)).  Most methods for computing the fundamental matrix solution $exp(A)$ will not be easily differentiable, but implementation approaches have been demonstrated in the numerical weather modeling community (see (2) and references therein).
 
 -The first approach is to use the Zassenhaus formula in conjunction with the existing s4/Mamaba technique starting from an initial good approximation for $exp(tA)$:
 $$exp(t(A + dA)) = exp(tA) * M $$
