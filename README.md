@@ -2,7 +2,7 @@
 
 There appears to be a discrepancy between the way operators are defined in the papers ([Hippo](https://arxiv.org/abs/2206.12037), [S4](https://arxiv.org/abs/2111.00396), and [Mamba](https://arxiv.org/pdf/2312.00752.pdf)) and the way they are implemented in the code.  The code uses elementwise exponentiation, while the papers use formulas for the fundamental matrix solution (see, for example (1)).  Most methods for computing the fundamental matrix solution $exp(A)$ will not be easily differentiable, but implementation approaches have been demonstrated in the numerical weather modeling community (see (2) and references therein).
 
--The first approach is to use the Zassenhaus formula in conjunction with the existing s4/Mamaba technique starting from an initial good approximation for $exp(tA)$:
+-The first approach is to use the algebraic form of Zassenhaus formula in conjunction with the existing s4/Mamaba technique, which starts from an initial good approximation for the optimal state propagator, $exp(tA_{opt})$:
 $$exp(t(A + dA)) = exp(tA) * M $$
 Where $M$ is defined by matrix exponentials of (high-order) commutators with $A$ & $dA$, and is implemented as a trainable parameter intialized @ $M = Id = eye()$. 
 -Use Runge-Kutta integration to get the initial $exp(tA)$
