@@ -5,8 +5,11 @@ There appears to be a discrepancy between the way operators are defined in the p
 -The first approach is to use the algebraic form of Zassenhaus formula in conjunction with the existing s4/Mamaba technique, which starts from an initial good approximation for the optimal state propagator, $exp(tA_{opt})$:
 $$exp(t(A + dA)) = exp(tA) * M $$
 Where $M$ is defined by matrix exponentials of (high-order) commutators with $A$ & $dA$, and is implemented as a trainable parameter intialized @ $M = Id = eye()$. 
+
 -Use Runge-Kutta integration to get the initial $exp(tA)$
+
 -Use Pade Approximates to get the initial $exp(tA)$; Golub and Van Loan (3)
+
 -Use other techniques from Moler and Van Loan's "19 dubious way's paper" (the recent update, actually, (4))
 
 
