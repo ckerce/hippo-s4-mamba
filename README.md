@@ -6,7 +6,7 @@ There appears to be a discrepancy between the way operators are defined in the p
 $$exp(t(A + dA)) = exp(tA) * M. $$
 Here $M$ is defined by matrix exponentials of (high-order) commutators with $A$ & $dA$, and is implemented as a trainable parameter intialized @ $M = Id = eye()$. 
 
-### Other easy-to-implement options include the following, but progressivly more computational expense:
+### Other easy-to-implement options include the following, but at progressivly more computational expense:
 
 - Use Runge-Kutta integration to get the initial $exp(tA)$, and potentially make a small number of steps part of the training loop.
 
