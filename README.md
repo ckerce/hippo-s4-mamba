@@ -2,17 +2,17 @@
 
 There appears to be a discrepancy between the way operators are defined in the papers ([Hippo](https://arxiv.org/abs/2206.12037), [S4](https://arxiv.org/abs/2111.00396), and [Mamba](https://arxiv.org/pdf/2312.00752.pdf)) and the way they are implemented in the code.  The code uses elementwise exponentiation, while the papers use formulas for the fundamental matrix solution (see, for example (1)).  Most methods for computing the fundamental matrix solution $exp(A)$ require an undesirable complexity and memomory usage to differentiate, however such implementations have been previously demonstrated in the numerical weather modeling community (see (2) and references therein).
 
--A first obvious approach to investigating this possible discrepancy is to use the algebraic form of Zassenhaus formula in conjunction with the existing s4/Mamaba technique, which starts from an initial good approximation for the optimal state propagator, $exp(tA_{opt})$:
+- A first obvious approach to investigating this possible discrepancy is to use the algebraic form of Zassenhaus formula in conjunction with the existing s4/Mamaba technique, which starts from an initial good approximation for the optimal state propagator, $exp(tA_{opt})$:
 $$exp(t(A + dA)) = exp(tA) * M $$
 Where $M$ is defined by matrix exponentials of (high-order) commutators with $A$ & $dA$, and is implemented as a trainable parameter intialized @ $M = Id = eye()$. 
 
-Other easy-to-implement, but progressivly more computationally expensive options include:
+### Other easy-to-implement options include the following, but progressivly more computational expense:
 
--Use Runge-Kutta integration to get the initial $exp(tA)$
+- Use Runge-Kutta integration to get the initial $exp(tA)$
 
--Use Pade Approximates to get the initial $exp(tA)$; Golub and Van Loan (3)
+- Use Pade Approximates to get the initial $exp(tA)$; Golub and Van Loan (3)
 
--Use other techniques from Moler and Van Loan's "19 dubious way's paper" (the most recent update, (4))
+- Use other techniques from Moler and Van Loan's "19 dubious way's paper" (the most recent update, (4))
 
 
 (1) [On the exponential solution of differential equations for a linear operator; Wilhelm Magnus;
