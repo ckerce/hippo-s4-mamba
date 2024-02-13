@@ -16,7 +16,7 @@ Here $M$ is defined by matrix exponentials of (high-order) commutators with $A$ 
 
 
 (1) [On the exponential solution of differential equations for a linear operator; Wilhelm Magnus;
-First published: November 1954; https://doi.org/10.1002/cpa.3160070404](https://onlinelibrary.wiley.com/doi/epdf/10.1002/cpa.3160070404?saml_referrer)
+Communications on Pure and Applied Mathematics, November 1954; https://doi.org/10.1002/cpa.3160070404](https://onlinelibrary.wiley.com/doi/epdf/10.1002/cpa.3160070404?saml_referrer)
 
 (2) [Assimilation of angle of arrival measurements from an antenna of GPS receivers in the WRF model; F Vandenberghe, Clayton Kerce, Robert Bock; Assimilation of Remote Sensing and In Situ Data in Modern Numerical Weather and Environmental Prediction Models]( https://www.researchgate.net/profile/Francois-Vandenberghe/publication/252405077_Assimilation_of_angle_of_arrival_measurements_from_an_antenna_of_GPS_receivers_in_the_WRF_model_-_art_no_66850A/links/54ffad7e0cf2741b69f943d6/Assimilation-of-angle-of-arrival-measurements-from-an-antenna-of-GPS-receivers-in-the-WRF-model-art-no-66850A.pdf)
 
