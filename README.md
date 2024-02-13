@@ -8,11 +8,11 @@ Here $M$ is defined by matrix exponentials of (high-order) commutators with $A$ 
 
 ### Other easy-to-implement options include the following, but progressivly more computational expense:
 
-- Use Runge-Kutta integration to get the initial $exp(tA)$
+- Use Runge-Kutta integration to get the initial $exp(tA)$, and potentially make a small number of steps part of the training loop.
 
-- Use Pade Approximates to get the initial $exp(tA)$; Golub and Van Loan (3)
+- Use Pade Approximates to get the initial $exp(tA)$; Golub and Van Loan (3).
 
-- Use other techniques from Moler and Van Loan's "19 dubious way's paper" (the most recent update, (4))
+- Use other techniques from Moler and Van Loan's "19 dubious way's paper" (the most recent update, (4)).
 
 
 (1) [On the exponential solution of differential equations for a linear operator; Wilhelm Magnus;
